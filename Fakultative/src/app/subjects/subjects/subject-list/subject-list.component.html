@@ -1,0 +1,9 @@
+<h2>Предметы</h2>
+<ul class="subjects">
+  <li *ngFor="let subject of  subjects$| async" [class.selected]="subject.id === selectedId" (click)="onSelect(subject)" >
+    <a [routerLink]="[subject.id]">
+      <span >{{ subject.id }}</span>. {{ subject.name }}
+    </a>
+  </li>
+</ul>
+<app-subject-details [subject]="selectedSubject"></app-subject-details>

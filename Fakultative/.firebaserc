@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ayanafakultative"
+  },
+  "targets": {
+    "ayanafakultative": {
+      "hosting": {
+        "Fakultative": [
+          "ayanafakultative"
+        ]
+      }
+    }
+  }
+}

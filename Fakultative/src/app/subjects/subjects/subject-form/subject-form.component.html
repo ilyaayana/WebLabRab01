@@ -1,0 +1,23 @@
+<form (ngSubmit)="onFormSubmit()">
+  <div class="form-group">
+    <label for="id">ID:</label>
+    <input type="number" id="id" name="id" [(ngModel)]="newSubject.id" required>
+  </div>
+  <div class="form-group">
+    <label for="name">Название:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="newSubject.name" [disabled]="isDelete" required>
+  </div>
+  <div class="form-group">
+    <label for="teacher">Преподаватель:</label>
+    <input type="text" id="teacher" name="teacher" [(ngModel)]="newSubject.teacher" [disabled]="isDelete" required>
+  </div>
+  <div class="form-group">
+    <label>
+      <input type="radio" name="operation" [(ngModel)]="operation" value="set" (change)="onRadioChange()"> Добавить/Обновить
+    </label>
+    <label>
+      <input type="radio" name="operation" [(ngModel)]="operation" value="delete" (change)="onRadioChange()"> Удалить
+    </label>
+  </div>
+  <button type="submit">Подвердить</button>
+</form>
